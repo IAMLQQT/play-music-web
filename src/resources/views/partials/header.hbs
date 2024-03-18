@@ -1,0 +1,35 @@
+<header id="main-header" class="flex a-center p-fixed t-0 r-0">
+    {{!-- {{#each results}}
+    <div class="account flex a-center">
+
+        <img src= "/img/userlogo.png"alt="">
+        <a href="/login" id="loginButton">
+            <h4 class="name">123{{data.username}}</h4>
+        </a>
+    </div>
+    {{/each}} --}}
+    
+
+
+    <!-- thanh tìm kiếm nhạc -->
+    <form action="/search" class="search">
+        <div class="input-group">
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" name="query" id="search" placeholder="Search for music">
+        </div>
+    </form>
+    <div class="account flex a-center">
+       
+        <a class="flex" href="/login" id="loginButton">
+         <img style="border-radius: 50%;" src="{{data.image}}"alt="">
+            <h4 style="margin:auto 10px; color:antiquewhite;" >{{data.username}}</h4>
+        </a>
+    </div>
+
+
+
+    <!-- account -->
+
+</header>

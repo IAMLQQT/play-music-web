@@ -1,0 +1,54 @@
+<div class="main-page">
+    <section>
+        {{!-- <div class="title-2 flex a-center">
+            <div class="Song style active">
+                <h4>Song</h4>
+            </div>
+            <div class="Album style ">
+                <h4>Album</h4>
+            </div>
+            <div class="PlayList style">
+                <h4>Playlist</h4>
+            </div>
+            <div class="line"></div>
+        </div> --}}
+        <div class="media-list">
+            {{#each searchresults}}
+
+                <div li-index="{{song_id}}">
+                    <div class="media-item flex a-center j-between">
+                        <div class="media-left flex a-center ">
+                            <a href=" "><img src="{{song_img}}" alt=""></a>
+                            <div class="detail">
+                                <h3>{{song_name}}</h3>
+                                <a href="">{{artist_name}}</a>
+                            </div>
+                            <audio id="main-audio" class="" src="" type="audio/mpeg"></audio>
+
+                            <span class="audio-duration"></span>
+                        </div>
+                        <div class="media-right">
+                            <span class="time" id="">{{song_time}} </span>
+                            <button class="heart "><i class="fa-solid fa-heart unlike"></i></button>
+                            <button class="plus"><i class="fa-solid fa-plus "></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                {{/each}}
+
+
+        </div>
+    </section>
+</div>
+
+<script src="/js/madeforyou.js"></script>
+
+{{!-- <script>
+    function playMusic() {
+        // Thay đổi nội dung của thẻ div để chèn iframe sau khi click nút
+        document.getElementById('spotifyPlayer').innerHTML = '<iframe src="https://open.spotify.com/embed/track/{{id}}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
+    }
+
+    document.getElementById('playButton').addEventListener('click', playMusic);
+</script> --}}
